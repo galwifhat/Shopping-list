@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Initialize event listeners once
   markPurchased.addEventListener("click", function () {
-    // Toggle purchased state for ALL items
-    shoppingList.forEach((item) => (item.purchased = !item.purchased));
+    // purchased state for ALL items set to true
+    shoppingList.forEach((item) => (item.purchased = true));
     updateShoppingList();
   });
 
@@ -27,18 +27,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     shoppingList.push({
-      id: Date.now(),
+      id: Date.now(), //makes a unique ID, unless items are entered at the same ms
       name: itemName,
-      purchased: false, // Initialize as not purchased
+      purchased: false, // Initialize as not purchased/New items start as unmarked
     });
 
-    ourForm.reset();
+    ourForm.reset(); // resets the form
     updateShoppingList();
   });
 
   function updateShoppingList() {
-    const listedItems = document.getElementById("list-item");
-    listedItems.innerHTML = "";
+    const unorderedList = document.getElementById("list-item");
+    unorderedList.innerHTML = ""; // a JavaScript statement that clears all the existing content
+    //  inside the #list-item element (which is likely a <ul> or <ol> list)
 
     shoppingList.forEach((grocery) => {
       const li = document.createElement("li");
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       li.appendChild(deleteButton);
-      listedItems.appendChild(li);
+      unorderedList.appendChild(li);
     });
   }
 });

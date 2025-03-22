@@ -7,19 +7,41 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div>
-      <h1>Shopping List</h1>
-      <form action="" id="our-form">
-        <label for="Item">New item</label>
-        <input type="text" id="item" placeholder="Shopping item" />
-        <input type="submit" value="Add new item" />
-      </form>
-      <div>
-        <h2>Item list</h2>
-        <ol id="list-item" class="list-item"></ol>
+    <div class="grid-container">
+      <div class="item1">
+        <h1>Shopping List</h1>
       </div>
-      <button id="bought">Mark purchased</button>
-      <button id="cleared">Clear list</button>
+      <div class="item2">
+        <ul>
+          <li>Fruits</li>
+          <li>Vegatables</li>
+          <li>Dairy Products</li>
+          <li>Dry Foods</li>
+        </ul>
+      </div>
+      <div class="item3">
+        <form action="" id="our-form">
+          <label for="Item">New item</label>
+          <input type="text" id="item" placeholder="Shopping item" />
+          <input type="submit" value="Add new item" />
+        </form>
+        <div class="item-list">
+          <h2>Item list:</h2>
+          <ol id="list-item" class="list-item"></ol>
+        </div>
+        <button id="bought">Mark purchased</button>
+        <button id="cleared">Clear list</button>
+      </div>
+      <div class="item4">
+        <h2>Advert</h2>
+        <ul>
+          <li>Buy this is discounted</li>
+          <li>buy this also</li>
+        </ul>
+      </div>
+      <div class="item5">
+        <p>This is the wonderful work of group 8</p>
+      </div>
     </div>
     <script src="./src/index.js"></script>
   </body>
