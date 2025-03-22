@@ -1,0 +1,4 @@
+/* No need for .strikethrough class anymore */
+button {
+  margin: 10px;
+}
